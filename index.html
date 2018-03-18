@@ -10,77 +10,116 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
 
-    <!-- Link to my CSS file -->
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
-
 </head>
 
 <body>
     <div class="container">
         <!-- Main Header -->
-        <div class="jumbotron">
-            <h1 class="text-center">Train Schedule</h1>
+        <div class="jumbotron" style="background-color:rgb(88, 154, 174); color:white;">
+            <strong>
+                <h1 class="text-center">Train Schedule</h1>
+            </strong>
             <p></p>
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <!-- Content for the current train schedule -->
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <!-- Panel heading-->
-                    <div class="panel-heading">Current Train Schedule</div>
+                    <div class="panel-heading"style="background-color:rgb(88, 154, 174); color:white;">
+                        <strong>
+                            <h3 class="panel-title"> Current Train Schedule</h3>
+                        </strong>
+                    </div>
                     <div class="panel-body">
-                            <table class="table table-hover" id='currentTrain'>
-                                   <!-- Table Headings -->
-                                <thead>
-                                        <tr>
-                                            <th>Train Name</th>
-                                            <th>Destination</th>
-                                            <th>Frequency(min)</th>
-                                            <th>Next Arrival</th>
-                                            <th>Minutes Away</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- Table body  -->
-                                        <p>   </p>
-                                    </tbody>
-                                </table>
-
+                        <table class="table table-hover" id='currentTrain'>
+                            <!-- Table Headings -->
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Table body  -->
+                                <p> </p>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Adding  a new pannel from which we will be able to add content to the Current Train Schedule Table -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading"style="background-color:rgb(88, 154, 174); color:white;">
+                        <h3 class="panel-title">
+                            <strong>Add Train</strong>
+                        </h3>
                     </div>
 
-                  
+                    <div class="panel-body">
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="">Train Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
 
+                            <div class="form-group">
+                                <label for="">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
 
+                            <div class="form-group">
+                                <label for="">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="time">
+                            </div>
 
+                            <div class="form-group">
+                                <label for="">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
 
-
-
-
+                            <button type="submit" class="btn btn-primary" id="addBt" style="background-color:rgb(88, 154, 174); color:white;">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <!-- Link to JQuery -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </div>
+    </div>
 
-            <!-- Link to Moment.js -->
-            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-            <!-- Link to Firebase -->
-            <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-            <script>
-                // Initialize Firebase
-                var config = {
-                    apiKey: "AIzaSyCgzWoqOlrRg11uM0uqJXXA7IS8kI8vgPw",
-                    authDomain: "train-schedule-16ac2.firebaseapp.com",
-                    databaseURL: "https://train-schedule-16ac2.firebaseio.com",
-                    projectId: "train-schedule-16ac2",
-                    storageBucket: "train-schedule-16ac2.appspot.com",
-                    messagingSenderId: "974441390295"
-                };
-                firebase.initializeApp(config);
-            </script>
-            <!-- Link to my Javascript file -->
-            <script src="../javascript/app.js"></script>
+
+
+
+
+
+    </div>
+    </div>
+    <!-- Link to JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Link to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgzWoqOlrRg11uM0uqJXXA7IS8kI8vgPw",
+            authDomain: "train-schedule-16ac2.firebaseapp.com",
+            databaseURL: "https://train-schedule-16ac2.firebaseio.com",
+            projectId: "train-schedule-16ac2",
+            storageBucket: "train-schedule-16ac2.appspot.com",
+            messagingSenderId: "974441390295"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!-- Link to my Javascript file -->
+    <script src="../javascript/app.js"></script>
 </body>
 
 </html>
