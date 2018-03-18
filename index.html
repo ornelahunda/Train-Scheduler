@@ -26,12 +26,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <!-- Content for the current train schedule -->
                 <div class="panel panel-primary">
+
                     <!-- Panel heading-->
-                    <div class="panel-heading"style="background-color:rgb(88, 154, 174); color:white;">
+                    <div class="panel-heading" style="background-color:rgb(88, 154, 174); color:white;">
                         <strong>
                             <h3 class="panel-title"> Current Train Schedule</h3>
                         </strong>
                     </div>
+
                     <div class="panel-body">
                         <table class="table table-hover" id='currentTrain'>
                             <!-- Table Headings -->
@@ -46,14 +48,18 @@
                             </thead>
                             <tbody>
                                 <!-- Table body  -->
-                                <p> </p>
+                                <tr>
+                                    <th id="displayName">Train Name</th>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+
                 <!-- Adding  a new pannel from which we will be able to add content to the Current Train Schedule Table -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading"style="background-color:rgb(88, 154, 174); color:white;">
+
+                    <div class="panel-heading" style="background-color:rgb(88, 154, 174); color:white;">
                         <h3 class="panel-title">
                             <strong>Add Train</strong>
                         </h3>
@@ -90,14 +96,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-    </div>
-    </div>
     <!-- Link to JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -106,7 +104,7 @@
 
     <!-- Link to Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script>
+    <!-- <script>
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyCgzWoqOlrRg11uM0uqJXXA7IS8kI8vgPw",
@@ -117,7 +115,7 @@
             messagingSenderId: "974441390295"
         };
         firebase.initializeApp(config);
-    </script>
+    </script> -->
     <!-- Link to my Javascript file -->
     <script src="../javascript/app.js"></script>
 </body>
