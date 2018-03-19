@@ -71,9 +71,8 @@
                     var nextTrainArrival = moment().add(minutes, "m").format("hh:mm A");
 
 
-
+                    $("#table").append("<td>");
                     $("#displayName").append("<br>" + databaseName);
-
                     $("#displayDestination").append("<br>" + databaseDestination);
                     $("#displayFrequency").append("<br>" + databaseFrequency);
                     $("#displayArrival").append("<br>" + nextTrainArrival);
