@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <!-- Link to Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!-- Link to Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
@@ -21,14 +23,16 @@
         <div class="jumbotron" style="background-color:rgb(88, 154, 174); color:white;">
             <strong>
                 <h1 class="text-center">Train Schedule</h1>
+                <h3 class="text-center">BETTER EARLY THAN LATE</h3>
             </strong>
             <p></p>
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
                 <!-- Content for the current train schedule -->
-                <div class="panel panel-primary"class="well">
+                <div class="panel panel-primary">
 
                     <!-- Panel heading-->
                     <div class="panel-heading" style="background-color:rgb(88, 154, 174); color:white;">
@@ -52,11 +56,11 @@
                             <tbody>
                                 <!-- Table body  -->
                                 <tr id="table">
-                                    <td id="displayName"></td>
-                                    <td id="displayDestination"></td>
-                                    <td id="displayFrequency"></td>
-                                    <td id="displayArrival"></td>
-                                    <td id="displayMin"></td>
+                                    <th id="displayName"></th>
+                                    <th id="displayDestination"></th>
+                                    <th id="displayFrequency"></th>
+                                    <th id="displayArrival"></th>
+                                    <th id="displayMin"></th>
                                 </tr>
                             </tbody>
                         </table>
